@@ -12,6 +12,7 @@
 
 from cmpl import *
 from outFormatted import *
+from graphing import *
 
 
 #branch predictor says always taken.
@@ -148,6 +149,7 @@ def processing():
                     print("Error durring additions at memory location:", storeTemp[0])
                     quit()
 
+
             elif(storeTemp[1][0]=='mult'):
                 #print(storeTemp[1][1],eval(storeTemp[1][1]), storeTemp[1][2],eval(storeTemp[1][2]))
                 if(storeTemp[1][3]=='r0'):
@@ -168,6 +170,7 @@ def processing():
                     print("Error durring additions at memory location:", storeTemp[0])
                     quit()
 
+
             elif(storeTemp[1][0]=='and'):
                 if(storeTemp[1][3]=='r0'):
                     r0=eval(storeTemp[1][1])^eval(storeTemp[1][2])
@@ -187,6 +190,7 @@ def processing():
                     print("Error durring additions at memory location:", storeTemp[0])
                     quit()
 
+
             elif(storeTemp[1][0]=='not'):
                 if(storeTemp[1][2]=='r0'):
                     r0=~eval(storeTemp[1][1])
@@ -202,6 +206,7 @@ def processing():
                     r5=~eval(storeTemp[1][1])
                 elif(storeTemp[1][3]=='r6'):
                     r6=~eval(storeTemp[1][1])
+                
                 
         else:
             output+=",S,-,-"   
@@ -243,4 +248,4 @@ def processing():
 
 
 processing()
-from graphing import *
+

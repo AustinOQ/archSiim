@@ -1,7 +1,6 @@
  Requirments:
-    python version 3.7+
-    tkinter
- 
+    python version 3.8+
+
  Description:
 
      sim.py is driver.
